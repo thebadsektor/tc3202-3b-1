@@ -114,7 +114,7 @@ Explain the structure of the project directory. Example:
 List all the team members involved in the project. Include their roles and responsibilities:
 
 - **Sis, Espinosa**: Lead Developer, Backend Developer
-- **Muni, Avellana, Abalon**: Frontend Developer, UI/UX Designer
+- **Muni, Avellana,**: Frontend Developer, UI/UX Designer
 - **Gerald Villaran**: Course Instructor
 
 ## Project Timeline
