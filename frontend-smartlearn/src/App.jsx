@@ -5,7 +5,7 @@ import Mainpage from "./Pages/Mainpage";
 function App() {
   return (
     <>
-      <Grammarpage/>
+      <Mainpage/>
     </>
   );
 }
