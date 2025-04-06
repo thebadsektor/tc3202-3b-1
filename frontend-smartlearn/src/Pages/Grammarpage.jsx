@@ -1,22 +1,22 @@
 import { useState } from "react";
 import EssayInput from "./EssayInput";
+import Resultcol from "./Resultcol";
+import Navbar from "../Components/Navbar";
 
 function Grammarpage(){
     const [text, setText] = useState("");
 
     return(
         <>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100">
+            <div className="fixed top-0 h-14 bg-white w-full border-b-1 border-gray-300 flex flex-col items-start" >
+                <div className="bold text-3xl left-0 mt-2 ml-3 bold">  
+                    <h1><span className="mr-0 p-0"> Grammar</span><span className="text-blue-400 ml-0 p-0"> Checker</span></h1>
+                </div>
+            </div>
+            <div className="flex mt-5 items-center justify-center min-h-screen bg-gray-100">
                 <div className="bg-gray-300 rounded-2xl grid-cols-2 grid justify-items-center items-center h-120 w-5/6">
                     <EssayInput/>
-                    <div className="w-full h-full">
-                        <textarea
-                        className="w-full p-4 h-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Start by writing, pasting (Ctrl + V) text, or uploading a document (doc, pdf)."
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
-                        />
-                    </div>
+                    <Resultcol/>
                 </div>
             </div>
         </>
