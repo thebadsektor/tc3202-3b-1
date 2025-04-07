@@ -37,14 +37,14 @@ const EssayInput = () => {
   return (
     <div className="w-full h-full bg-white rounded-lg shadow p-4 flex flex-col">
       <textarea
-        className="w-full flex-1 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+        className="w-full flex-1 p-4 border border-gray-300 rounded-lg  resize-none"
         placeholder="Start by writing, pasting (Ctrl + V) text, or uploading a document (doc, pdf)."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
       
         <button
-          className="flex items-center gap-2 px-1 py-1 w-30 mt-2 text-green-700 border border-green-700 rounded-full hover:bg-green-50 transition-colors"
+          className="flex items-center gap-2 px-2 py-1 w-1/3 mt-2 text-blue-400 border border-blue-400 rounded-full hover:bg-blue-400 hover:text-white transition-colors"
           onClick={handleUpload}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -63,7 +63,7 @@ const EssayInput = () => {
 
         <button
           type="button"
-          className="mt-4 block self-end text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg"
+          className="mt-4 block self-end text-white bg-blue-400 hover:bg-white hover:text-blue-400 border-blue-400 border-1 px-4 py-1 rounded-md "
         >
           Check
         </button>

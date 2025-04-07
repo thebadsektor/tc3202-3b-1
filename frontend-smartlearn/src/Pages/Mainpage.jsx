@@ -1,8 +1,11 @@
 import Navbar from "../Components/Navbar"
+import { useNavigate } from "react-router-dom";
 import PenIcon from "../assets/SidebarIcons/PenIcon"
 
 
 function Mainpage(){
+    const navigate = useNavigate();
+
     return(
     <>
         <Navbar/>
@@ -15,10 +18,9 @@ function Mainpage(){
                 </button>
             </div>
         </div>
-        <div className="bg-blue-300 w-full h-50 grid-cols-3 grid items-center">
-            <Cardbox icon={<PenIcon/>} cardname="Grammar checker" carddes="Fix your essay"/>
-            <Cardbox icon={<PenIcon/>} cardname="Open pdf" carddes="Pdf reader "/>
-            <Cardbox icon={<PenIcon/>} cardname="Summarizer" carddes="Summarize text"/>
+        <div className="bg-blue-300 w-full h-50 grid-cols-2 grid place-items-center">
+            <Cardbox icon={<PenIcon/>} cardname="Grammar checker" carddes="Fix your essay" onClick={() => navigate("/grammar")}/>
+            <Cardbox icon={<PenIcon/>} cardname="Summarizer" carddes="Summarize text" onClick={() => navigate("/summary")}/>
         </div>
         <div className="bottom-0 h-40 w-full">
         <h1>heeloworld</h1>
@@ -27,21 +29,23 @@ function Mainpage(){
     )
 }
 
-function Cardbox ({cardname, carddes, icon}){
+function Cardbox ({cardname, carddes, icon, onClick}){
     return(
-        <>
-            <button className="ml-18 w-65 h-23 bg-white rounded-3xl shadow-md items-center flex justify-start p-0 hover:bg-gray-300 hover:border-1 transition delay-150 duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-                <div id="Logo" className="mr-2 ml-2 flex flex-col w-15 h-full rounded-md justify-center items-center">
-                <span className="flex-shrink-0 w-6 h-6">
-                    {icon}
-                </span>
-                </div>
-                <div className="h-full w-full flex-col flex justify-center">
-                    <h1 className="w-full text-2xl mb-1">{cardname}</h1> 
-                    <p className="text-sm text-gray">{carddes}</p>
-                </div>
-            </button>
-        </>
+        <button
+            onClick={onClick}
+            className="w-1/2 h-1/2 bg-white rounded-3xl shadow-md items-center flex justify-start p-0 hover:bg-gray-300 hover:border-1 transition delay-150 duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 "
+            >
+            <div
+                id="Logo"
+                className="mr-2 ml-2 flex flex-col w-15 h-full rounded-md justify-center items-center"
+            >
+                <span className="flex-shrink-0 w-6 h-6">{icon}</span>
+            </div>
+            <div className="h-full w-full flex-col flex justify-center">
+                <h1 className="w-full text-2xl mb-1">{cardname}</h1>
+                <p className="text-sm text-gray">{carddes}</p>
+            </div>
+        </button>
     )
 }
 
