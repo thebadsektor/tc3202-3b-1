@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Resultcol = () => {
-
+const Resultcol = ({ text }) => {
   return (
     <div className='w-full h-full'>
-      <textarea className="w-full h-full px-7 py-5" disabled></textarea>
-        {/**dito lalagay code ng backend*/}
-
+      <textarea 
+        className="w-full h-full px-7 py-5" 
+        disabled
+        value={text || ''}
+        placeholder="Extracted text will appear here..."
+      ></textarea>
     </div>
-  )
-}
+  );
+};
 
-export default Resultcol
+export default Resultcol;

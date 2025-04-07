@@ -4,7 +4,7 @@ import Resultcol from "./Resultcol";
 import Navbar from "../Components/Navbar";
 
 function Grammarpage(){
-    const [text, setText] = useState("");
+    const [extractedText, setExtractedText] = useState("");
 
     return(
         <>
@@ -15,14 +15,12 @@ function Grammarpage(){
             </div>
             <div className="flex mt-5 items-center justify-center min-h-screen bg-gray-100">
                 <div className="bg-gray-300 rounded-2xl grid-cols-2 grid justify-items-center items-center h-120 w-5/6">
-                    <EssayInput/>
-                    <Resultcol/>
+                    <EssayInput onTextExtracted={setExtractedText} />
+                    <Resultcol text={extractedText} />
                 </div>
             </div>
         </>
     )
 }
-
-
 
 export default Grammarpage
