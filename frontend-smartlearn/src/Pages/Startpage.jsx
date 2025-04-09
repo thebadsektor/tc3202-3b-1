@@ -21,7 +21,7 @@ function Startbtn ({Text, onclick}){
         <>
             <button
                 onClick={onclick}
-                className='flex items-center justify-center gap-2 hover:scale-110 transition delay-50 duration-300 ease-in-out text-bgcolor hover:bg-amber-200 font-bold hover:text-black bg-white p-3 h-15 text-3xl rounded-3xl'
+                className='flex items-center justify-center gap-2 hover:scale-110 transition delay-50 duration-300 ease-in-out text-bgcolor  font-bold  bg-white p-3 h-15 text-3xl rounded-3xl'
                 >
                 <PlayIcon className="w-6 h-6" />
                 {Text}
