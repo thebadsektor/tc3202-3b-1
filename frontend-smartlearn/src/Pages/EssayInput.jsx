@@ -70,11 +70,11 @@ const EssayInput = ({ onTextExtracted }) => {
       )}
       
       <button
-        className="flex items-center gap-2 px-2 py-1 w-1/3 mt-2 text-blue-400 border border-blue-400 rounded-full hover:bg-blue-400 hover:text-white transition-colors"
+        className="flex items-center gap-2 px-2 py-1 w-1/3 mt-2 text-bgcolor border border-bgcolor rounded-full transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
         onClick={handleUpload}
         disabled={isLoading}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text " viewBox="0 0 20 20" fill="#000a2e">
           <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
         </svg>
         Upload Document
@@ -90,7 +90,7 @@ const EssayInput = ({ onTextExtracted }) => {
 
       <button
         type="button"
-        className="mt-4 block self-end text-white bg-blue-400 hover:bg-white hover:text-blue-400 border border-blue-400 px-4 py-1 rounded-md"
+        className="mt-4 block self-end text-white bg-bgcolor  px-4 py-1 rounded-md transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
         disabled={isLoading}
       >
         Check
