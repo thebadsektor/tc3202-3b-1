@@ -13,6 +13,7 @@ function Mainpage() {
     const navigateToGrammar = () => navigate("/grammar");
     const navigateToSummary = () => navigate("/summary");
     const navigateToQuizzes = () => navigate("/quizzes");
+    const navigateToStudymaker = () => navigate("/studymaker");
 
     return (
         <div className="min-h-screen bg-bgcolor text-white">
@@ -34,9 +35,9 @@ function Mainpage() {
                   }} 
                   initial="hidden" 
                   animate="show"
-                  className="w-full max-w-2xl"
+                  className="w-full max-w-4xl"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-10">
                     <motion.div 
                       variants={{ 
                         hidden: { opacity: 0, scale: 0.8 }, 
@@ -45,8 +46,8 @@ function Mainpage() {
                       className="h-full"
                     >
                       <MainButton 
-                        text="Grammar Checker" 
-                        Des="Grammar" 
+                        text="Essay/Grammar Checker" 
+                        Des="Grammar"
                         Icon={<GrammarIcon />} 
                         onClick={navigateToGrammar}
                       />
@@ -61,7 +62,7 @@ function Mainpage() {
                     >
                       <MainButton 
                         text="Summarizer" 
-                        Des="Summary" 
+                        Des="Summary"
                         Icon={<SummaryIcon />} 
                         onClick={navigateToSummary}
                       />
@@ -79,6 +80,21 @@ function Mainpage() {
                         Des="quizzes" 
                         Icon={<QuizIcon />} 
                         onClick={navigateToQuizzes}
+                      />
+                    </motion.div>
+
+                    <motion.div 
+                      variants={{ 
+                        hidden: { opacity: 0, scale: 0.8 }, 
+                        show: { opacity: 1, scale: 1, transition: { duration: 0.5 } } 
+                      }}
+                      className="h-full"
+                    >
+                      <MainButton 
+                        text="Studymaker" 
+                        Des="Make you own study material" 
+                        Icon={<QuizIcon />} 
+                        onClick={navigateToStudymaker}
                       />
                     </motion.div>
                   </div>
