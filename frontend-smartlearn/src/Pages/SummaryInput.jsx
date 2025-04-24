@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import * as mammoth from 'mammoth';
 
-const EssayInput = ({ text, onTextChange, onCheck, isLoading, wordCount, wordLimit }) => {
+const SummaryInput = ({ text, onTextChange, onAnalyze, isLoading, wordCount, wordLimit }) => {
   const fileInputRef = useRef(null);
 
   const handleUpload = () => {
@@ -42,7 +42,7 @@ const EssayInput = ({ text, onTextChange, onCheck, isLoading, wordCount, wordLim
     <div className="w-full h-full bg-white rounded-lg shadow p-4 flex flex-col">
       <textarea
         className="w-full flex-1 p-4 border border-gray-300 rounded-lg resize-none"
-        placeholder="Start by writing, pasting (Ctrl + V) text, or uploading a document (docx, txt)."
+        placeholder="Enter your summary or upload a document (docx, txt)."
         value={text}
         onChange={(e) => onTextChange(e.target.value)}
         disabled={isLoading}
@@ -69,7 +69,7 @@ const EssayInput = ({ text, onTextChange, onCheck, isLoading, wordCount, wordLim
           className={`text-white border px-6 py-2 rounded-md flex items-center gap-2 transition-colors
             ${wordCount > wordLimit || isLoading ? 'bg-gray-300 border-gray-300 cursor-not-allowed' : 'bg-blue-400 hover:bg-blue-500 border-blue-400'}
           `}
-          onClick={onCheck}
+          onClick={onAnalyze}
           disabled={isLoading || wordCount > wordLimit}
         >
           {isLoading ? (
@@ -78,14 +78,14 @@ const EssayInput = ({ text, onTextChange, onCheck, isLoading, wordCount, wordLim
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Checking...
+              Analyzing...
             </>
           ) : (
             <>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-             Check Grammar
+              Summarize
             </>
           )}
         </button>
@@ -102,4 +102,4 @@ const EssayInput = ({ text, onTextChange, onCheck, isLoading, wordCount, wordLim
   );
 };
 
-export default EssayInput;
+export default SummaryInput;

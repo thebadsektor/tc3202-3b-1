@@ -6,7 +6,7 @@ function Studymaker(){
             <Secondnav title="Study maker"/>
             <div className="items-center justify-center flex">
                 <h1 className="px-8 font-bold text-7xl text-white">
-                    Comming soon
+                    Coming soon
                 </h1>
             </div>
         </div>
