@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import Startpage from "../Pages/Startpage";
 
 function Navbar({page, name}){
     return (
-        <div className="fixed top-0 h-14 bg-secondarycolor w-full border-b-1 border-amber-300 flex flex-row items-start justify-between">
+        <div className="fixed top-0 h-14 bg-secondarycolor w-full border-b-1 border-amber-300 flex flex-row items-start justify-between z-20">
             <div className="font-bold text-3xl left-0 mt-2 ml-3">
                 <Link to="/" className="flex items-center">
                     <h1>
